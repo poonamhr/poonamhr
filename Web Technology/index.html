@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Medical World</title>
+    <style>
+        header nav img {
+            max-width: 250px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            color: rgb(10, 10, 56);
+            background-size: cover;
+            position: relative;
+            box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.4);
+            border-bottom: 5px solid #00b3b3;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0;
+            animation: slideIn 1s forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .about {
+            font-size: larger;
+            margin-left: 20px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 60px 20px;
+        }
+
+        .content .card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .content .card::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .content .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .content .card h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #004080;
+        }
+
+        .content .card p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .content .card .btn {
+            background: #00b3b3;
+            color: white;
+            border-radius: 50px;
+            display: inline-block;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .content .card .btn:hover {
+            background: #004080;
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 1180px) {
+            .content .card {
+                width: 60%;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .content {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .content .card {
+                width: 45%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+                margin-top: 100px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .content .card {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 60px 10px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+                margin-top: 200px;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .content .card {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .content .card .btn {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pathology.html">Pathology</a></li>
+                <li><a href="radiology.html">Radiology</a></li>
+                <li><a href="cardiology.html">Cardiology</a></li>
+                <li><a href="anatomy.html">Anatomy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="background-image: url(IMAGES/homepage-picture.webp);">
+            <h1>Welcome to the Medical Pathway</h1>
+            <p>A medical educational & learning center for Pathology, Radiology, Cardiology and many more</p>
+        </section>
+
+        <section class="about">
+            <h2>About This Project</h2>
+            <p>This website is designed to provide in-depth insights into medical learning, featuring case studies,
+                diagnostic techniques, and the latest advancements.</p>
+        </section>
+
+        <section class="content">
+            <div class="card">
+                <h3>Pathology</h3>
+                <p>Explore the science of disease in human body.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="card">
+                <h3>Radiology</h3>
+                <p>Discover the role of imaging techniques in modern medicine.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="card">
+                <h3>Cardiology</h3>
+                <p>Understand the heart and the functionality behind it.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Medical Insights. All rights reserved.
+    </footer>
+</body>
+
+</html>

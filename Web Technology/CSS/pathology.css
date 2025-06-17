@@ -1,0 +1,506 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin-top: -90px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+  animation: animation 1s ease;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  animation: animation 1s ease;
+}
+
+.hero .btn {
+  background: #8B0000;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: 0.3s;
+  animation: animation 1s ease;
+}
+
+.hero .btn:hover {
+  background: #004080;
+}
+
+#pathology-main {
+  scroll-margin-top: 65px;
+}
+
+.pathology-main {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px 20px;
+  max-width: 100%;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.pathology-main h3 {
+  font-size: 1.4em;
+  color: #550000;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.pathology-main p {
+  line-height: 1.8;
+  color: #666;
+  font-size: 1em;
+}
+
+.intro-pathology h2 {
+  font-size: 2rem;
+  color: #004080;
+  margin-bottom: 1rem;
+  border-left: 6px solid #004080;
+  padding-left: 0.8rem;
+  text-align: justify;
+}
+
+.intro-pathology p {
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+.pathology-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  margin-top: 30px;
+}
+
+.pathology-table thead th {
+  font-size: 1.3em;
+  text-align: left;
+  padding: 12px;
+  color: #550000;
+  border-bottom: 2px solid #ccc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pathology-table tbody tr {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.pathology-table tbody tr:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.pathology-table td {
+  vertical-align: top;
+  padding: 20px;
+  width: 50%;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.pathology-table h3 {
+  margin-top: 0;
+  color: #990000;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.pathology-table tbody p {
+  font-size: 0.95em;
+  color: #555;
+  text-align: justify;
+}
+
+.pathology-table img {
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.pathology-table img:hover {
+  transform: scale(1.05);
+}
+
+.pathology-table:nth-of-type(2) tr td:first-child {
+  width: 400px;
+  height: 150px;
+  vertical-align: middle;
+}
+
+.pathology-table:nth-of-type(2) tr td:nth-child(2),
+.pathology-table:nth-of-type(2) tr td:nth-child(3),
+.pathology-table:nth-of-type(2) tr td:nth-child(4) {
+  width: 180px;
+  height: 180px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.pathology-table:nth-of-type(2) tr td img {
+  max-width: 90%;
+  max-height: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+.pathology-table:nth-of-type(2) tr td p {
+  margin: 5px 0 0;
+  text-align: left;
+}
+
+.image-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.image-row img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-row img:hover {
+  transform: scale(1.05);
+}
+
+.quiz {
+  background: #004080;
+  padding: 3rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.quiz-container {
+  max-width: 1200px;
+  margin: auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  margin-bottom: 1.8rem;
+  padding: 1rem;
+  background: #f9fbfc;
+  border: 1px solid #dde6ed;
+  border-radius: 0.75rem;
+  transition: 0.3s ease;
+}
+
+.question:hover {
+  background: #eef5fb;
+  border-color: #bcd6f4;
+}
+
+.question h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: #1c2350;
+  text-align: justify;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #333;
+  text-align: justify;
+}
+
+input[type="radio"] {
+  margin-right: 0.5rem;
+  accent-color: #cc0000;
+}
+
+button {
+  background-color: #8B0000;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  display: block;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #a80000;
+}
+
+#result {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #1d3557;
+}
+
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .pathology-table td {
+    padding: 16px;
+    font-size: 0.95rem;
+  }
+
+  .image-row img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    padding: 0 10px;
+  }
+
+  .intro-pathology p {
+    font-size: 15px;
+  }
+
+  .intro-pathology h2 {
+    font-size: 28px;
+  }
+
+  .pathology-table tr p {
+    font-size: 15px;
+  }
+
+  .pathology-table img {
+    margin-top: 150px;
+  }
+
+  .pathology-table:nth-of-type(2) tr td:first-child {
+    width: 120px;
+    height: 50px;
+  }
+
+  .pathology-table:nth-of-type(2) tr td:nth-child(2),
+  .pathology-table:nth-of-type(2) tr td:nth-child(3),
+  .pathology-table:nth-of-type(2) tr td:nth-child(4) {
+    width: 50px;
+    height: 50px;
+  }
+
+  .image-row img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .question {
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width: 580px) {
+  .pathology-table:nth-of-type(2) tr td:first-child {
+    width: 120px;
+    height: 50px;
+  }
+
+  .pathology-table:nth-of-type(2) tr td:nth-child(2),
+  .pathology-table:nth-of-type(2) tr td:nth-child(3),
+  .pathology-table:nth-of-type(2) tr td:nth-child(4) {
+    width: 50px;
+    height: 50px;
+  }
+
+  .image-row img {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 480px) {
+  #pathology-main {
+    scroll-margin-top: 80px;
+  }
+
+  .hero {
+    margin-left: -15px;
+    margin-top: -10px;
+  }
+
+  .pathology-table:nth-of-type(2) tr td:first-child {
+    width: 90px;
+    height: 50px;
+  }
+
+  .pathology-table:nth-of-type(2) tr td:nth-child(2),
+  .pathology-table:nth-of-type(2) tr td:nth-child(3),
+  .pathology-table:nth-of-type(2) tr td:nth-child(4) {
+    width: 30px;
+    height: 30px;
+  }
+
+  .quiz-container .question h3,
+  label {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 425px) {
+  .pathology-table {
+    width: 100%;
+    font-size: 0.85em;
+  }
+
+  .pathology-table td {
+    padding: 8px;
+  }
+
+  .pathology-table td img {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+  }
+
+  .pathology-table:nth-of-type(2) tr td:first-child {
+    width: 120px;
+    height: auto;
+  }
+
+  .pathology-table:nth-of-type(2) tr td:nth-child(2),
+  .pathology-table:nth-of-type(2) tr td:nth-child(3),
+  .pathology-table:nth-of-type(2) tr td:nth-child(4) {
+    width: 70px;
+    height: 70px;
+  }
+
+  .pathology-table:nth-of-type(2) tr td img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .pathology-table tbody tr p {
+    font-size: 12px;
+  }
+
+  .quiz-container .question h3,
+  .quiz-container label {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 320px) {
+  .pathology-table {
+    width: 100%;
+    font-size: 0.8em;
+  }
+
+  .pathology-table tbody tr {
+    width: 100%;
+  }
+
+  .pathology-table td {
+    padding: 5px;
+    font-size: 0.9em;
+  }
+
+  .pathology-table td img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+  }
+
+  .pathology-table:nth-of-type(2) tr td:first-child {
+    width: 100px;
+    height: auto;
+  }
+
+  .pathology-table:nth-of-type(2) tr td:nth-child(2),
+  .pathology-table:nth-of-type(2) tr td:nth-child(3),
+  .pathology-table:nth-of-type(2) tr td:nth-child(4) {
+    width: 50px;
+    height: 50px;
+  }
+
+  .pathology-table:nth-of-type(2) tr td img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .pathology-table tbody tr p {
+    font-size: 11px;
+  }
+
+  .click-box h2 {
+    font-size: 14px;
+    width: 200px;
+  }
+}
