@@ -1,0 +1,85 @@
+{% block main %}
+
+    <head>
+        <link href="/static/style.css" rel="stylesheet">
+    </head>
+
+    <body style="background-color:#f2e6ff;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light-purple">
+            <a>Calculate</a>
+            <div class="links">
+                <ul>
+                    <a href="/login" style="color: white; font-size:25px;">Login</a>
+                    <a style="color: white; font-size:25px;">QUIZZES:</a>
+                    <a href="/Computers.html" style="color: white; font-size:25px;">Computers</a>
+                    <a href="/Maths.html" style="color: white; font-size:25px;">Maths</a>
+                    <a href="/English.html" style="color: white; font-size:25px;">English</a>
+                </ul>
+            </div>
+        </nav>
+        <div class="h1">
+            <h1>Percentage Calculator</h1>
+        </div>
+        <div class="h2">
+            <h2>Fill in the subjects to calculate the overall percentage:</h2>
+        </div>
+        <form id="calculate" action="/calculate" method="post">
+            <div class="subject-container">
+                <label for="subject1">Subject:</label>
+                <input type="text" id="subject" name="subject[]">
+                <label for="grades1">Marks Obtained:</label>
+                <input type="text" id="grades1" name="grades[]">
+            </div>
+            <div class="subject-container">
+                <label for="subject2">Subject:</label>
+                <input type="text" id="subject2" name="subject[]">
+                <label for="grades2">Marks Obtained:</label>
+                <input type="text" id="grades2" name="grades[]">
+            </div>
+            <div class="button-container">
+                <button type="button" id="AddSubject">Add Subject</button>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+
+        {% if percentage %}
+            <div class="percentage-message">
+                <p>Your overall percentage is: {{ percentage }}%</p>
+            </div>
+        {% endif %}
+
+        <script>
+            function AddSubject() {
+                var SubjectContainer = document.getElementById("calculate");
+                var AddSubjectContainer = document.createElement("div");
+                AddSubjectContainer.className = "SubjectContainer";
+                AddSubjectContainer.classList.add("subject-container");
+
+
+                var subject = document.createElement("label");
+                subject.textContent = "Subject";
+                var inputsubject = document.createElement("input");
+                inputsubject.type = "text";
+                inputsubject.name = "subject[]";
+                inputsubject.required = true;
+
+                var grades = document.createElement("label");
+                grades.textContent = "Marks Obtained:";
+                var inputgrades = document.createElement("input");
+                inputgrades.type = "text";
+                inputgrades.name = "grades[]";
+                inputgrades.required = true;
+
+                AddSubjectContainer.appendChild(subject);
+                AddSubjectContainer.appendChild(inputsubject);
+                AddSubjectContainer.appendChild(grades);
+                AddSubjectContainer.appendChild(inputgrades);
+
+                SubjectContainer.appendChild(AddSubjectContainer);
+            }
+
+            document.getElementById("AddSubject").addEventListener("click", AddSubject);
+        </script>
+    </body>
+    </div>
+{% endblock %}

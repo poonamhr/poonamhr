@@ -1,0 +1,276 @@
+.title {
+    text-align: center;
+    color: purple;
+}
+
+/* Submit button in register.html, calculate.html, Computers.html, Maths.html, English.html*/
+.btn-primary {
+    width: 150px;
+    margin-bottom: 10px;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+
+/*For the quote */
+.paragraph-size-quotes p {
+    color: #000080;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.attribution {
+    color: #C71585;
+    font-style: italic;
+}
+
+.explanation {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #6c757d;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.explanation p {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* This is for calculate.html*/
+.bg-light-purple {
+    background-color: #7851a9;
+    margin-top: 30px;
+}
+
+.h1 {
+    text-align: center;
+    font-size: 20px;
+    color: #e75480;
+}
+
+.h2 {
+    text-align: center;
+    color: #2e6c4f;
+}
+
+.subject-container {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: thick solid pink;
+    border-radius: 20px;
+    background-color: #e6e6fa;
+    padding: 20px;
+    text-align: center;
+}
+
+/* It increases the length of the blanks in calculate.html*/
+.subject-container input[type="text"] {
+    margin-bottom: 10px;
+    width: calc(100% - 20px);
+}
+
+.subject-container label {
+    color: purple;
+}
+
+#AddSubject {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    width: 150px;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+
+#AddSubject:hover {
+    background-color: #0056b3;
+}
+
+/*This will fix the add subject and submit button to top right*/
+.button-container {
+    position: fixed;
+    top: 120px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* This will appear the percentage message */
+.percentage-message {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    font-size: 80px;
+    color: darkblue;
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+/* for percentage message*/
+@keyframes slideIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*for Computers.html*/
+.body-computers {
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.navbar-computers {
+    background-color: #6c757d;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-nav .nav-link-computers {
+    color: white;
+}
+
+.nav-link-computers {
+    font-size: 30px;
+}
+
+.container-computers {
+    max-width: 1020px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 7.5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.h1-computers {
+    text-align: center;
+    color: #D2B48C;
+}
+
+label {
+    display: block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* for the size of the naviagtion bar in Computers.html*/
+.navbar-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+/* Maths.html*/
+.navbar-maths {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.container-maths {
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-link-maths {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.quiz-container {
+    border: 1px;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #d8d8ff;
+    box-shadow: 0 2px 4px;
+    text-align: left;
+    font-size: 25px;
+}
+
+.quiz-option-container {
+    border: 1px;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #FFC0CB;
+    text-align: left;
+    font-size: 20px;
+}
+
+/*English.html*/
+
+.image-english {
+    background-image: url('image-english.jpg');
+}
+
+.navbar-english {
+    background-color: #800080;
+    color: #fff;
+    padding: 10px 0;
+
+}
+
+.h1-english {
+    text-align: center;
+    color: #2E8B57;
+}
+
+.quiz-container-english {
+    font-size: 25px;
+    margin: 50px;
+
+}
+
+.quiz-option-container-english {
+    font-size: 20px;
+    margin: 50px;
+}
+
+/*for calculate, Computers, Maths, English*/
+.links a {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/*results.html*/
+.score {
+    position: fixed;
+    top: 10%;
+    left: 25%;
+    font-size: 150px;
+    color: pink;
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+.image-score {
+    background-image: url("thisiscs50.jpg");
+    background-size: cover;
+    background-position: center;
+}

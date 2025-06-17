@@ -1,0 +1,17 @@
+{% block main %}
+
+    <head>
+        <link href="/static/style.css" rel="stylesheet">
+        <title>SCORES</title>
+    </head>
+
+    <body class="image-score">
+        <form action="/quizzes/results.html">
+            {% if score %}
+                <div class="score">
+                    <p>Score: {{ score }} / 10</p>
+                </div>
+            {% endif %}
+        </form>
+    </body>
+{% endblock %}

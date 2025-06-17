@@ -1,0 +1,96 @@
+{% block main %}
+
+    <head>
+        <link href="/static/style.css" rel="stylesheet">
+        <title>Computers</title>
+    </head>
+
+    <body style="background-color:#001F3F" class="body-computers">
+
+        <nav class="navbar-computers">
+            <div class="links">
+                <ul class="navbar-nav ms-auto">
+                    <a class="nav-limk-computers">Quizzes</a>
+                    <a class="nav-link-computers" href="/login">Log In</a>
+                    <a class="nav-link-computers" href="/">Back</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-computers">
+        <h1 class="h1-computers">QUIZ COMPUTERS</h1>
+
+        <form action="/quizzes/Computers" method="post">
+
+            <input type="hidden" name="quiz_name" value="computers">
+
+            <p>Question 1:What does a Boolean expresion returns?</p>
+            <label><input type="radio" name="answer" value="Logical Value">Logical Value</label><br>
+            <label><input type="radio" name="answer" value="String">String</label><br>
+            <label><input type="radio" name="answer" value="Character">Character</label><br>
+            <label><input type="radio" name="answer" value="Rational Value">Ratioanl Value</label><br>
+
+            <p>Question 2:What is C?</p>
+            <label><input type="radio" name="answers1" value="Progarmming language">Programming language</label><br>
+            <label><input type="radio" name="answers1" value="Language">Language</label><br>
+            <label><input type="radio" name="answers1" value="English Character">English Character</label><br>
+            <label><input type="radio" name="answers1" value="Company">Company</label><br>
+
+            <p>Question 3:What is the full form of CSS?</p>
+            <label><input type="radio" name="answers2" value="Character Style Sheets">Character Style Sheets</label><br>
+            <label><input type="radio" name="answers2" value="Cascading Style Sheets">Cascading Style Sheets</label><br>
+            <label><input type="radio" name="answers2" value="Computer Style Sheets">Computer Style Sheets</label><br>
+            <label><input type="radio" name="answers2" value="Colorful Style Sheets">Colorful Style Sheets</label><br>
+
+            <p>Question 4:Which programming language is commonly used for web development?</p>
+            <label><input type="radio" name="answers3" value="C++">C++</label><br>
+            <label><input type="radio" name="answers3" value="C">C</label><br>
+            <label><input type="radio" name="answers3" value="Javascript">Javascript</label><br>
+            <label><input type="radio" name="answers3" value="Python">Python</label><br>
+
+            <p>Question 5:Which sorting algorithm has the worst-case time complexity of 0(n^2)?</p>
+            <label><input type="radio" name="answers4" value="Quick Sort">Quick Sort</label><br>
+            <label><input type="radio" name="answers4" value="Merge Sort">Merge Sort</label><br>
+            <label><input type="radio" name="answers4" value="Insertion Sort">Insertion Sort</label><br>
+            <label><input type="radio" name="answers4" value="Bubble Sort">Bubble Sort</label><br>
+
+            <p>Question 6:Which of the following is NOT a primary color in digital graphics?</p>
+            <label><input type="radio" name="answers5" value="Red">Red</label><br>
+            <label><input type="radio" name="answers5" value="Yellow">Yellow</label><br>
+            <label><input type="radio" name="answers5" value="Blue">Blue</label><br>
+            <label><input type="radio" name="answers5" value="Green">Green</label><br>
+
+
+            <p>Question 7:What is the best way to create a password?</p>
+            <label><input type="radio" name="answers6" value="Substitute">Substitute letters with numbers or punctuation signs</label><br>
+            <label><input type="radio" name="answers6" value="Ensure">Ensure it's at least 8 scharacters long</label><br>
+            <label><input type="radio" name="answers6" value="Password Manager">Have a password manager generate it for you</label><br>
+            <label><input type="radio" name="answers6" value="Uppercase Lowercase">Include both uppercase and lowercase letters</label><br>
+
+            <p>Question 8:Which type of encryption is most secure?</p>
+            <label><input type="radio" name="answers7" value="Logical Value">Enhanced Encryption</label><br>
+            <label><input type="radio" name="answers7" value="End-to-end Encryption">End-to-end Encryption</label><br>
+            <label><input type="radio" name="answers7" value="Full-scale Encryption">Full-scale Encryption</label><br>
+            <label><input type="radio" name="answers7" value="Advanced Encryption">Advanced Encryption</label><br>
+
+            <p>Question 9:What is the purpose of a compiler?</p>
+            <label><input type="radio" name="answers8" value="High Level">To convert a high-level code to machine code</label><br>
+            <label><input type="radio" name="answers8" value="Machine Code">To convert machine code to high-level code</label><br>
+            <label><input type="radio" name="answers8" value="Debug">To debug the errors</label><br>
+            <label><input type="radio" name="answers8" value="Performance">To maintain the performance of a code</label><br>
+
+
+            <p>Question 10:What does error 500 means?</p>
+            <label><input type="radio" name="answers9" value="moved Permanently">Moved Permanently</label><br>
+            <label><input type="radio" name="answers9" value="Internal Server Error">Internal Server Error</label><br>
+            <label><input type="radio" name="answers9" value="Bad Request">Bad Request</label><br>
+            <label><input type="radio" name="answers9" value="Page Not Found">Page Not Found</label><br>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+
+    </div>
+    </body>
+{% endblock %}

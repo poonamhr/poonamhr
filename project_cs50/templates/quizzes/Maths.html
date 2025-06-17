@@ -1,0 +1,128 @@
+{% block main %}
+
+    <head>
+        <link href="/static/style.css" rel="stylesheet">
+        <title>Maths</title>
+    </head>
+
+    <body>
+        <nav class="navbar-maths">
+            <div class="container.maths">
+                <ul class="navbar-nav ms-auto">
+                    <a class="nav-link-maths">Quizzes</a>
+                    <a href="/login" class="nav-link-maths" style="color: white; font-size:25px;">Login</a>
+                    <a href="/" class="nav-link-maths" style="color: white; font-size:25px;">Back</a>
+                </ul>
+            </div>
+        </nav>
+
+        <h1>QUIZ MATHS</h1>
+        <form action="/quizzes/Maths" method="post">
+
+            <input type="hidden" name="quiz_name" value="maths">
+
+            <div class="quiz-container">
+                <p>Question 1:Which fundamental concept in Calculus represents the accumulation or net total of a quantity over a given interval?</p>
+            </div>
+            <div class="quiz-option-container">
+                <label class="option"><input type="radio" name="answer10" value="Integral">Integral</label><br>
+                <label class="option"><input type="radio" name="answer10" value="Limits">Limits</label><br>
+                <label class="option"><input type="radio" name="answer10" value="Chain Rule">Chain Rule</label><br>
+                <label class="option"><input type="radio" name="answer10" value="Derivative">Derivative</label><br>
+            </div>
+
+            <div class="quiz-container">
+                <p>Question 2:What is the derivative of f(x) = 3x(^2)−2x+1 ?</p>
+            </div>
+            <div class="quiz-option-container">
+                <label><input type="radio" name="answers11" value="F1">F'(x) = 3x - 2</label><br>
+                <label><input type="radio" name="answers11" value="F2">F'(x) = 6x + 2</label><br>
+                <label><input type="radio" name="answers11" value="F3">F'(x) = 6x - 2</label><br>
+                <label><input type="radio" name="answers11" value="F4">F'(x) = 3x + 2</label><br>
+            </div>
+
+            <div class="quiz-container">
+                <p>Question 3:Find the integral: ∫ (3x(^2) + 2x +1) ?</p>
+            </div>
+            <div class="quiz-option-container">
+                <label><input type="radio" name="answers12" value="Integral1">3x(^2) + 2x + x + C</label><br>
+                <label><input type="radio" name="answers12" value="Integral2">x^3 + x^2 + x + C</label><br>
+                <label><input type="radio" name="answers12" value="Integral3">3x + x^2 + C</label><br>
+                <label><input type="radio" name="answers12" value="Integral4">x^4 + 3x + C</label><br>
+            </div>
+
+            <div class="quiz-container">
+                <p>Question 4:What is teh derivative of f(x) = sin(x) ?</p>
+            </div>
+            <div class="quiz-option-container">
+                <label><input type="radio" name="answers13" value="cos1">sin(x)</label><br>
+                <label><input type="radio" name="answers13" value="cos2">-cos(x)</label><br>
+                <label><input type="radio" name="answers13" value="cos3">-sin(x)</label><br>
+                <label><input type="radio" name="answers13" value="cos4">cos(x)</label><br>
+            </div>
+
+            <div class="quiz-container">
+                <p>Question 5:What does the process of integration involve ?</p>
+            </div>
+            <div class="quiz-option-container">
+                <label><input type="radio" name="answers14" value="Integration1">Finding the derivative of a function</label><br>
+                <label><input type="radio" name="answers14" value="Integration2">Finding the area under a curve</label><br>
+                <label><input type="radio" name="answers14" value="Integration3">Finding the limits of a function</label><br>
+                <label><input type="radio" name="answers14" value="Integration4">Finding the average rate of change of a function</label><br>
+            </div>
+
+            <div class="quiz-container">
+                <p>Question 6:What is the period of the sine function ?</p>
+            </div>
+            <div class="quiz-option-container">
+                <label><input type="radio" name="answers15" value="pi1">2π</label><br>
+                <label><input type="radio" name="answers15" value="pi2">2</label><br>
+                <label><input type="radio" name="answers15" value="pi3">-1</label><br>
+                <label><input type="radio" name="answers15" value="pi4">π/2</label><br>
+            </div>
+
+            <div class="quiz-container">
+                <p>Question 7:For theorem Rolle to be existed a function must:?</p>
+            </div>
+            <div class="quiz-option-container">
+                <label><input type="radio" name="answers16" value="sinx1">Be continuous on closed interval [a,b]</label><br>
+                <label><input type="radio" name="answers16" value="sinx2">Be diffrentiable on an open interval(a,b)</label><br>
+                <label><input type="radio" name="answers16" value="sinx3">Be f(a) = f(b)</label><br>
+                <label><input type="radio" name="answers16" value="sinx4">All of the above</label><br>
+            </div>
+
+            <div class="quiz-container">
+                <p>Question 8:What is the value of sin(90 degrees) ?</p>
+            </div>
+            <div class="quiz-option-container">
+                <label><input type="radio" name="answers17" value="degree1">0</label><br>
+                <label><input type="radio" name="answers17" value="degree2">-1</label><br>
+                <label><input type="radio" name="answers17" value="degree3">1/2</label><br>
+                <label><input type="radio" name="answers17" value="degree4">1</label><br>
+            </div>
+
+            <div class="quiz-container">
+                <p>Question 9:Which of the following is a polynomial function ?</p>
+            </div>
+            <div class="quiz-option-container">
+                <label><input type="radio" name="answers18" value="poly1">f(x) = x^2 + 3x + 1</label><br>
+                <label><input type="radio" name="answers18" value="poly2">f(x) = e </label><br>
+                <label><input type="radio" name="answers18" value="poly3">f(x) = sin(x)</label><br>
+                <label><input type="radio" name="answers18" value="poly4">f(x) = ln(x)</label><br>
+            </div>
+
+            <div class="quiz-container">
+                <p>Question 10:What does Optimization involves ?</p>
+            </div>
+            <div class="quiz-option-container">
+                <label><input type="radio" name="answers19" value="optimization1">Finding the maximum or minimum value of a function</label><br>
+                <label><input type="radio" name="answers19" value="optimization2">Finding the maximum value of a function</label><br>
+                <label><input type="radio" name="answers19" value="optimization3">Finding the minimum value of a function</label><br>
+                <label><input type="radio" name="answers19" value="optimization4">None of the above</label><br>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
+    </body>
+{% endblock %}

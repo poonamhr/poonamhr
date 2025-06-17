@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+    <head>
+       
+        <link href="/static/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <form action="/login" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="username" placeholder="Username" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
+            </div>
+            <button class="btn btn-primary" type="submit">Log In</button>
+        </form>
+        <div class="paragraph-size-quotes" style="color:#C71585;">
+            <p>Satt vidia ko parhe prapat kare sada gian!</p>
+            <p>Ravidass kahe bin vidiya nar ko jaan ajaan!!</p>
+            <p class="attribution">- Guru Ravidass Ji</p>
+        </div>
+        <div class="explanation">
+            <p>Satguru Ravidass Ji Maharaj advocates that human beings must always pursue truthful learning and seek true enlightenment.Guru Ji says that anyone without good
+                learning and education should be deemed to be absolutely ignorant.</p>
+        </div>
+    </body>
+{% endblock %}
