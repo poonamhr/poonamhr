@@ -44,5 +44,3 @@
 🐙 [github.com/poonamhr](https://github.com/poonamhr)
 
 ---
-
-*Thanks for visiting my profile! 😊*
